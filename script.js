@@ -10,25 +10,23 @@ for (i = 1; i <= 256; i++){
     })
 }
 
-// button.addEventListener("click", () => {
-//     container.replaceChildren();
+button.addEventListener("click", () => {
+    container.replaceChildren();
 
-//     do{
-//         newGrid = +prompt("Enter new grid size", "Enter a number between 16 and 100");  
-//     }
-//     while(newGrid < 16 || newGrid > 100);
+    do{
+        newGrid = +prompt("Enter new grid size", "Enter a number between 16 and 100");  
+    }
+    while(newGrid < 16 || newGrid > 100);
 
-//     newGridSize = newGrid * newGrid;
-//     squareSize = 600 / newGrid;
-//     console.log(squareSize);
+    newGridSize = newGrid * newGrid;
+    squareSize = 600 / newGrid;
 
-//     for (i = 1; i <= (newGridSize); i++){
-//         const div = document.createElement("div");
-//         div.style.cssText = "width:(squareSize)px; height:(squareSize)px; "
-//         container.appendChild(div);
-//         div.addEventListener("mouseover", () => {
-//             div.style.cssText = "background-color: black;";
-//         })
-//     }
-
-// })
+    for (i = 1; i <= (newGridSize); i++){
+        const div = document.createElement("div");
+        div.style.cssText = "width:"+squareSize+"px; height:"+squareSize+"px;"
+        container.appendChild(div);
+        div.addEventListener("mouseover", () => {
+            div.style.cssText = "width:"+squareSize+"px; height:"+squareSize+"px; background-color: black;";
+        })
+    }
+})
